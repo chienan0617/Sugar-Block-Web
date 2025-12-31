@@ -62,7 +62,9 @@ public final class ShapeController extends GamePiece {
         candidates[i] = new Shape(null, data);
       }
 
-      if (TileEmulator.canPlaceAnyOrderSequence(candidates)) {
+      // Ensure each candidate shape has at least one independent placement
+      // (do not require finding an ordering where placing one affects others).
+      if (TileEmulator.canPlaceAllIndividually(candidates)) {
         found = true;
         break;
       }

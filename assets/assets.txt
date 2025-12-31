@@ -5,6 +5,7 @@ i:b:/fonts/w.ttf:89876:1
 i:d:/icon:0:1
 i:b:/icon/block_128_9.png:56112:1
 i:b:/icon/block_17t.png:382356:1
+i:b:/icon/block_21t.png:358042:1
 i:b:/libgdx.png:2456:1
 c:b:/com/badlogic/gdx/utils/lsans-15.png:10270:1
 c:b:/com/badlogic/gdx/graphics/g3d/shaders/default.vertex.glsl:9096:1

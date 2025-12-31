@@ -15,7 +15,7 @@ public class MainScene extends Scene {
     });
 
     SceneManager.add(new StandardScene(null, "standard"));
-    SceneManager.add(new DroppingScene(null, "dropping"));
-    SceneManager.add(new SlideScene(null, "slide"));
+    // SceneManager.add(new DroppingScene(null, "dropping"));
+    // SceneManager.add(new SlideScene(null, "slide"));
   }
 }

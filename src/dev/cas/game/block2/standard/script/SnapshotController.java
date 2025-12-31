@@ -40,7 +40,8 @@ public final class SnapshotController {
         Color cc = shape.info.color();
 
         GameInstance.objectBatch.setColor(cc.r, cc.g, cc.b, 0.5F);
-        GameInstance.objectBatch.draw(Tile.ICON, renderPos.x, renderPos.y);
+        GameInstance.objectBatch.draw(GameInstance.RANDOM.nextInt(1) == 1 ? Tile.ICON_1 : Tile.ICON_2, renderPos.x,
+            renderPos.y);
         GraphicUtils.setBatchToWhite();
       }
     }

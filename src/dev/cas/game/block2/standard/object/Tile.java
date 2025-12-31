@@ -17,9 +17,12 @@ public final class Tile extends Drawable {
   public static final int COLS = 8;
   public static final int WIDTH = (Board.WIDTH - (Board.BORDER * 2) - (COLS - 1) * Board.INTERNAL) / COLS;
   public static final int HEIGHT = WIDTH;
-  public static final String ICON_FILE_NAME = "icon/block_17t.png";
-  public static final Pixmap ICON_PIXMAP = GraphicUtils.loadAndAdjustPixmap(ICON_FILE_NAME, WIDTH, HEIGHT);
-  public static final Texture ICON = new Texture(ICON_PIXMAP);
+  public static final String ICON_FILE_NAME_1 = "icon/block_17t.png";
+  public static final String ICON_FILE_NAME_2 = "icon/block_21t.png";
+  public static final Pixmap ICON_PIXMAP_1 = GraphicUtils.loadAndAdjustPixmap(ICON_FILE_NAME_1, WIDTH, HEIGHT);
+  public static final Pixmap ICON_PIXMAP_2 = GraphicUtils.loadAndAdjustPixmap(ICON_FILE_NAME_2, WIDTH, HEIGHT);
+  public static final Texture ICON_1 = new Texture(ICON_PIXMAP_1);
+  public static final Texture ICON_2 = new Texture(ICON_PIXMAP_2);
 
   public final TileInfo info;
 
@@ -44,7 +47,8 @@ public final class Tile extends Drawable {
   }
 
   private void initTex() {
-    super.texture = new Texture(ICON_PIXMAP);
+    var a = GameInstance.RANDOM.nextInt(2) == 1 ? ICON_PIXMAP_1 : ICON_PIXMAP_2;
+    super.texture = new Texture(a);
   }
 
   @Override

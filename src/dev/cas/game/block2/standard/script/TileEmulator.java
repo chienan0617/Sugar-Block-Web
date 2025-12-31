@@ -107,6 +107,35 @@ public final class TileEmulator {
     return canPlaceRec(shapes, used, g);
   }
 
+  /**
+   * 確保每個 shape 都至少有一個可以放置的位置（互不依賴其它 shapes 的放置）。
+   * 這是要求「三個都可以放置」的檢查方式：對於每個 shape，
+   * 在當前棋盤快照上只要存在一個合法位置即視為可放置。
+   */
+  public static boolean canPlaceAllIndividually(Shape[] shapes) {
+    boolean[][] g = snapshotGrid();
+    int rows = g.length;
+    int cols = g[0].length;
+
+    for (Shape s : shapes) {
+      if (s == null) continue; // skip empty slot
+
+      boolean found = false;
+      for (int r = 0; r < rows && !found; r++) {
+        for (int c = 0; c < cols; c++) {
+          if (isPlacableOnGrid(s, r, c, g)) {
+            found = true;
+            break;
+          }
+        }
+      }
+
+      if (!found) return false;
+    }
+
+    return true;
+  }
+
   private static boolean canPlaceRec(Shape[] shapes, boolean[] used, boolean[][] g) {
     // 找到所有已放的數量
     int placedCount = 0;
