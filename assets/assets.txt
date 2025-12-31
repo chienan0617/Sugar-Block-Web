@@ -1,0 +1,16 @@
+i:d:/fonts:0:1
+i:b:/fonts/default.ttf:28752:1
+i:b:/fonts/SpaceGrotesk-VariableFont_wght.ttf:134112:1
+i:b:/fonts/w.ttf:89876:1
+i:d:/icon:0:1
+i:b:/icon/block_128_9.png:56112:1
+i:b:/icon/block_17t.png:382356:1
+i:b:/libgdx.png:2456:1
+c:b:/com/badlogic/gdx/utils/lsans-15.png:10270:1
+c:b:/com/badlogic/gdx/graphics/g3d/shaders/default.vertex.glsl:9096:1
+c:b:/com/badlogic/gdx/graphics/g3d/particles/particles.fragment.glsl:820:1
+c:b:/com/badlogic/gdx/graphics/g3d/particles/particles.vertex.glsl:2886:1
+c:b:/com/badlogic/gdx/graphics/g3d/shaders/depth.vertex.glsl:2931:1
+c:b:/com/badlogic/gdx/graphics/g3d/shaders/default.fragment.glsl:5874:1
+c:b:/com/badlogic/gdx/utils/lsans-15.fnt:17711:1
+c:b:/com/badlogic/gdx/graphics/g3d/shaders/depth.fragment.glsl:869:1
